@@ -1,13 +1,13 @@
 {
   "name": "react-admin-firebase",
   "description": "A firebase data provider for the React Admin framework",
-  "version": "5.1.0-beta.0",
+  "version": "5.1.0-beta.1",
   "peerDependencies": {
     "firebase": "9.x || 10.x || 11.x",
     "react": "17.x || 18.x || 19.x",
     "react-admin": "4.x || 5.x",
     "react-dom": "17.x || 18.x || 19.x",
-    "react-router-dom": "5.x || 6.x"
+    "react-router-dom": "5.x || 6.x || 7.x"
   },
   "dependencies": {
     "lodash": "4.x",
@@ -20,7 +20,6 @@
     "@types/lodash": "^4.14.150",
     "@types/node": "^10.9.4",
     "@types/react": "^18.0.9",
-    "@types/react-router-dom": "^5.3.3",
     "@types/rx": "^4.1.1",
     "firebase": "^11.9.1",
     "firebase-tools": "11.x",
@@ -62,5 +61,6 @@
   "source": "src/index.ts",
   "engines": {
     "node": ">=10"
-  }
+  },
+  "packageManager": "yarn@4.9.2"
 }
