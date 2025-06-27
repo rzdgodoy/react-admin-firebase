@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "4.12.4",
     "@material-ui/icons": "4.11.3",
-    "firebase": "^9.6.4",
+    "firebase": "^11.9.1",
     "react": "^19.x",
     "react-admin": "5",
     "react-admin-firebase": "5.0.0",
