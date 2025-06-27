@@ -1,7 +1,7 @@
 {
   "name": "react-admin-firebase",
   "description": "A firebase data provider for the React Admin framework",
-  "version": "5.1.0-beta.0",
+  "version": "5.1.0-beta.1",
   "peerDependencies": {
     "firebase": "9.x || 10.x || 11.x",
     "react": "17.x || 18.x || 19.x",
