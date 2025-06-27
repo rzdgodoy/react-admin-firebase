@@ -8,7 +8,7 @@
     "firebase": "^11.9.1",
     "react": "^19.x",
     "react-admin": "5",
-    "react-admin-firebase": "5.0.0",
+    "react-admin-firebase": "5.1.0-beta.0",
     "react-dom": "^19.x",
     "react-firebaseui": "^6.0.0",
     "react-router-dom": "^6.x",
