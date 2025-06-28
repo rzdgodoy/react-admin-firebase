@@ -18,7 +18,7 @@ describe('api methods', () => {
       {
         sort: {
           field: 'title',
-          order: 'asc',
+          order: 'ASC',
         },
         filter: {},
         pagination: {
@@ -56,7 +56,7 @@ describe('api methods', () => {
       {
         sort: {
           field: 'title',
-          order: 'asc',
+          order: 'ASC',
         },
         pagination: {
           page: 1,

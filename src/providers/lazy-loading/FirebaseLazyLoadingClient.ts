@@ -22,13 +22,21 @@ export class FirebaseLazyLoadingClient {
     private client: FireClient
   ) {}
 
-  public async apiGetList<T extends ra.Record>(
+  public async apiGetList<T extends ra.RaRecord>(
     resourceName: string,
     reactAdminParams: ra.GetListParams
   ): Promise<ra.GetListResult<T>> {
     const r = await this.tryGetResource(resourceName);
     const params = getFullParamsForQuery(
-      reactAdminParams,
+      {
+        ...reactAdminParams,
+        sort: reactAdminParams.sort
+          ? {
+              ...reactAdminParams.sort,
+              order: reactAdminParams.sort.order.toUpperCase() as 'ASC' | 'DESC',
+            }
+          : undefined,
+      },
       !!this.options.softDelete
     );
 

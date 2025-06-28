@@ -3,7 +3,7 @@ import { log } from '../../misc';
 import * as ra from '../../misc/react-admin-models';
 import { FireClient } from '../database';
 
-export async function Update<T extends ra.Record>(
+export async function Update<T extends ra.RaRecord>(
   resourceName: string,
   params: ra.UpdateParams,
   client: FireClient

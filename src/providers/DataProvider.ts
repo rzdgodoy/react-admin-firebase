@@ -53,31 +53,31 @@ export function DataProvider(
 
   const newProviderApi: IDataProvider = {
     app: fireWrapper.GetApp(),
-    getList<RecordType extends ra.Record = ra.Record>(
+    getList<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.GetListParams
     ): Promise<ra.GetListResult<RecordType>> {
       return run(() => GetList<RecordType>(resource, params, client));
     },
-    getOne<RecordType extends ra.Record = ra.Record>(
+    getOne<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.GetOneParams
     ): Promise<ra.GetOneResult<RecordType>> {
       return run(() => GetOne<RecordType>(resource, params, client));
     },
-    getMany<RecordType extends ra.Record = ra.Record>(
+    getMany<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.GetManyParams
     ): Promise<ra.GetManyResult<RecordType>> {
       return run(() => GetMany<RecordType>(resource, params, client));
     },
-    getManyReference<RecordType extends ra.Record = ra.Record>(
+    getManyReference<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.GetManyReferenceParams
     ): Promise<ra.GetManyReferenceResult<RecordType>> {
       return run(() => GetManyReference<RecordType>(resource, params, client));
     },
-    update<RecordType extends ra.Record = ra.Record>(
+    update<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.UpdateParams
     ): Promise<ra.UpdateResult<RecordType>> {
@@ -89,13 +89,13 @@ export function DataProvider(
     ): Promise<ra.UpdateManyResult> {
       return run(() => UpdateMany(resource, params, client));
     },
-    create<RecordType extends ra.Record = ra.Record>(
+    create<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.CreateParams
     ): Promise<ra.CreateResult<RecordType>> {
       return run(() => Create<RecordType>(resource, params, client));
     },
-    delete<RecordType extends ra.Record = ra.Record>(
+    delete<RecordType extends ra.RaRecord = ra.RaRecord>(
       resource: string,
       params: ra.DeleteParams
     ): Promise<ra.DeleteResult<RecordType>> {

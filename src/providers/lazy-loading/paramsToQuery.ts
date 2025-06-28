@@ -88,8 +88,8 @@ export function getFiltersConstraints(filters: {
 
 export function getSortConstraints(sort: {
   field: string;
-  order: string;
-}): QueryConstraint[] {
+  order: "ASC" | "DESC";
+} | undefined): QueryConstraint[] {
   if (sort != null && sort.field !== 'id') {
     const { field, order } = sort;
     const parsedOrder = order.toLocaleLowerCase() as FireStoreQueryOrder;
@@ -107,6 +107,9 @@ async function getPaginationConstraints<
   resourceName: string,
   flogger: IFirestoreLogger
 ): Promise<QueryConstraint[]> {
+  if (!params.pagination) {
+    throw new Error('getPaginationConstraints: params.pagination is required but was not provided.');
+  }
   const { page, perPage } = params.pagination;
 
   if (page === 1) {
@@ -148,6 +151,9 @@ export function getFullParamsForQuery<
 export function getNextPageParams<TParams extends messageTypes.IParamsGetList>(
   params: TParams
 ): TParams {
+  if (!params.pagination) {
+    throw new Error('getNextPageParams: params.pagination is required but was not provided.');
+  }
   return {
     ...params,
     pagination: {

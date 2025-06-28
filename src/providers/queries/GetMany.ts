@@ -3,7 +3,7 @@ import { log, recursivelyMapStorageUrls } from '../../misc';
 import * as ra from '../../misc/react-admin-models';
 import { FireClient } from '../database/FireClient';
 
-export async function GetMany<T extends ra.Record>(
+export async function GetMany<T extends ra.RaRecord>(
   resourceName: string,
   params: ra.GetManyParams,
   client: FireClient

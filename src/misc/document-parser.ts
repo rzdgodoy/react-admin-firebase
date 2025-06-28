@@ -9,7 +9,7 @@ import {
   translateDocFromFirestore,
 } from './translate-from-firestore';
 
-export function parseFireStoreDocument<T extends ra.Record>(
+export function parseFireStoreDocument<T extends ra.RaRecord>(
   doc: FireStoreQueryDocumentSnapshot | FireStoreDocumentSnapshot | undefined
 ): T {
   if (!doc) {

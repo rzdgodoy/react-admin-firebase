@@ -72,6 +72,9 @@ export async function findLastQueryCursor(
   resourceName: string,
   flogger: IFirestoreLogger
 ) {
+  if (!params.pagination) {
+    throw new Error('findLastQueryCursor: params.pagination is required but was not provided.');
+  }
   const { page, perPage } = params.pagination;
 
   let lastQueryCursor: FireStoreDocumentSnapshot | false = false;

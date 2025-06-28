@@ -3,7 +3,7 @@ import { log, logError } from '../../misc';
 import * as ra from '../../misc/react-admin-models';
 import { FireClient } from '../database';
 
-export async function DeleteSoft<T extends ra.Record>(
+export async function DeleteSoft<T extends ra.RaRecord>(
   resourceName: string,
   params: ra.DeleteParams,
   client: FireClient
