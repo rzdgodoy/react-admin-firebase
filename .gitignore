@@ -10,9 +10,9 @@ node_modules
 # production
 /build
 
-# ignore dist now
-/dist
-dist
+# ignore dist now - commented out for fork usage
+# /dist
+# dist
 
 #ide
 .idea
